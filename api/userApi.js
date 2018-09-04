@@ -3,9 +3,9 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 // 连接数据库
-//202.182.111.4
+
 const db = mysql.createPool({
-    host:'202.182.111.4',
+    host:'localhost',
 	user:'root',
 	password:'hanchao',
 	database:'vue_study',
