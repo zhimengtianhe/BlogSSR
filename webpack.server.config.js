@@ -7,11 +7,11 @@ module.exports = {
   // The target should be set to "node" to avoid packaging built-ins.
   target: 'node',
   // The entry should be our server entry file, not the default one.
-  entry: './src/main.server.js',
+  entry: './src/server-entry.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js',
+    filename: 'bundle.server.js',
     // Outputs node-compatible modules instead of browser-compatible.
     libraryTarget: 'commonjs2'
   },
@@ -55,7 +55,7 @@ module.exports = {
   // No need to put these behind a production env variable.
   plugins: [
     // Add the SSR plugin here.
-    new VueSSRPlugin(),
+    //new VueSSRPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
@@ -72,3 +72,4 @@ module.exports = {
     })
   ]
 }
+
