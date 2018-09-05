@@ -10,7 +10,6 @@ export default context => {
 
 
 		router.push(context.url);
-s
 
 		router.onReady(() => {
 
